@@ -1,0 +1,20 @@
+[
+    {
+      "title": "First commnent",
+      "content": "This is the 1st content in the postDate.json"
+    },
+    {
+        "title": "Second commnent",
+        "content": "This is the 2nd content in the postDate.json"
+    },
+    {
+        "title": "Third commnent",
+        "content": "This is the 3rd content in the postDate.json"
+    },
+    {
+        "title": "Fourth commnent",
+        "content": "This is the 4th content in the postDate.json"
+    }
+    
+]
+  

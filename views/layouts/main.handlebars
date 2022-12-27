@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tech Blog</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;400;600&display=swap" rel="stylesheet">
+  {{!-- <link rel="stylesheet" href="/css/testcss.css"> --}}
+
+</head>
+
+<body>
+
+  <div class="">
+
+      <header class="ttb-header">
+
+        <a href="/">
+        <h1>The Tech Blog</h1>
+        </a>
+
+        <nav>
+
+          {{#if logged_in}}
+          <ul class="nav-list">
+            <a class="nav-object" href="/home"><li>Home</li></a>
+            <a class="nav-object" href="/dashboard"><li>Dashboard</li></a>
+            <button class="no-button nav-object" id="logout"><li>Logout</li></button>
+          </ul>
+          {{else}}
+          <ul class="nav-list">
+            <a class="nav-object fake-button" href="/login"><li>Login</li></a>
+          </ul>
+          {{/if}}
+
+        </nav>
+
+      </header>
+
+      <main class="main-body">
+
+        {{{ body }}}
+
+      </main>
+
+    <footer>
+    <p>The Tech blog © 2022</p>
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
