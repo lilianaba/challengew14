@@ -1,1 +1,40 @@
 this is post handlebar
+
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>{{post.title}}</h2>
+    <p>{{post.content}}</p>
+    <!-- Call helper function to format the date -->
+    <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+  </div>
+ </div>
+
+ {{#if post.comments}}
+ <h2>Commments:</h2>
+ 
+ <div> 
+ {{#each post.comments }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <p>{{content}}</p>
+          <!-- Call helper function to format the date -->
+    <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  </div>
+ 
+</div>
+{{/each}}
+ </div>
+{{/if}}
+
+ <form class="form new-comment-form">
+      <div class="form-group">
+        <label for="post-comment">Comment:</label>
+        <textarea class="form-input" id="post-comment" name="post-comment"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create Comment</button>
+      </div>
+    </form>
+
+
+      <script src="/js/comment.js"></script>
