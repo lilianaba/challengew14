@@ -2,11 +2,19 @@ this is post handlebar
 
 <div class="row mb-4 project">
   <div class="col-md-5">
-    <h2>{{post.title}}</h2>
-    <p>{{post.content}}</p>
+    {{!-- <h2>{{post.title}}</h2> --}}
+    <h2><input type="text" id="updated_title" name="updated_title" value="{{post.title}}"></h2>
+    {{!-- <p>{{post.content}}</p> --}}
+    <p><input type="text" id="updated_content" name="updated_content" value="{{post.content}}"></p>
+   
     <!-- Call helper function to format the date -->
-    <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+    {{!-- <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p> --}}
+    <p>Created on {{format_date post.date_created}}</p>
   </div>
+   <div class="form-group">
+    <button type="submit" class="btn btn-primary" id="update-post">Update Post</button>
+    <button type="submit" class="btn btn-primary" id="cxl">Cancel</button>
+   </div>
  </div>
 
  {{#if post.comments}}
