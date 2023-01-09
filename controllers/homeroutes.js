@@ -80,6 +80,18 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+//WHY!!
+router.get('/newpost', withAuth, async (req, res)=> {
+  if (req.session.logged_in) {
+    res.render('newpost');
+    return;
+  }
+
+  res.render('login');
+});
+
+
+
 
 
 
