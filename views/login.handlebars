@@ -1,44 +1,66 @@
-{{!-- allows the user to log in or create an account --}}
+{{! allows the user to log in or create an account }}
 
 <div class="login-page">
-    <div class="login-card">
-      <h2 class="page-title">Login</h2>
-      <form class="form login-form">
-        <div class="form-group">
-          <label for="email-login">Email:</label>
-          <input class="form-input" type="text" id="email-login" />
-        </div>
-        <div class="form-group">
-          <label for="password-login">Password:</label>
-          <input class="form-input" type="password" id="password-login" placeholder="XXXXXXXX"/>
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary" type="submit">LOGIN</button>
-        </div>
-      </form>
-    </div>
-    <div class="login-card">
-  
-      <h2 class="page-title">Signup</h2>
-      <form class="form signup-form">
-        <div class="form-group">
-          <label for="username-signup">Username:</label>
-          <input class="form-input" type="text" id="name-signup" />
-        </div>
-        <div class="form-group">
-          <label for="email-signup">Email:</label>
-          <input class="form-input" type="text" id="email-signup" />
-        </div>
-        <div class="form-group">
-          <label for="password-signup">Password:</label>
-          <input class="form-input" type="password" id="password-signup" placeholder="XXXXXXXX"/>
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary" type="submit">SIGN UP</button>
-        </div>
-      </form>
-    </div>
-
+  <div class="login-card text-center">
+    <h2 class="page-title">Login</h2>
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">Email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">Password:</label>
+        <input
+          class="form-input"
+          type="password"
+          id="password-login"
+          placeholder="XXXXXXXX"
+        />
+      </div>
+      <div class="form-group">
+        <button
+          class="btn btn-secondary"
+          type="submit"
+          data-toggle="button"
+          aria-pressed="false"
+          autocomplete="off"
+        >LOGIN</button>
+      </div>
+    </form>
   </div>
-  
-  <script src="./js/login.js"></script>
+
+  <div class="login-card text-center">
+    <h2 class="page-title">Signup</h2>
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="username-signup">Username:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">Email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">Password:</label>
+        <input
+          class="form-input"
+          type="password"
+          id="password-signup"
+          placeholder="XXXXXXXX"
+        />
+      </div>
+      <div class="form-group">
+        <button
+          class="btn btn-secondary"
+          type="submit"
+          data-toggle="button"
+          aria-pressed="false"
+          autocomplete="off"
+        >SIGN UP</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<script src="./js/login.js"></script>

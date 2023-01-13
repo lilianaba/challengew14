@@ -1,61 +1,84 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Tech Blog</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>The Tech Blog</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;400;600&display=swap" rel="stylesheet">
-  {{!-- <link rel="stylesheet" href="/css/testcss.css"> --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    {{! <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" /> }}
 
-</head>
+  </head>
 
-<body>
+  <body>
 
-  <div class="">
+    <div class="">
 
-      <header class="ttb-header">
+      <header
+        class="jumbotron jumbotron-fluid d-flex justify-content-between text-white bg-dark ttb-header"
+      >
 
-        <a href="/">
-        <h1>The Tech Blog</h1>
+        <a class="text-white" href="/">
+          <h1>The Tech Blog</h1>
         </a>
 
-        <nav>
+        <nav class="d-flex flex-row-reverse form-inline">
 
           {{#if logged_in}}
-          <ul class="nav-list">
-            <a class="nav-object" href="/"><li>Home</li></a>
-            <a class="nav-object" href="/dashboard"><li>Dashboard</li></a>
-            <button class="no-button nav-object" id="logout"><li>Logout</li></button>
-          </ul>
+            <ul class="nav-list d-flex flex-row">
+              <a class="nav-object text-white p-2 list-group" href="/"><li
+                  class="list-group"
+                >Home</li></a>
+              <a
+                class="nav-object text-white p-2 list-group"
+                href="/dashboard"
+              ><li class="list-group">Dashboard</li></a>
+              <button class="nav-object p-2 list-group" id="logout"><li
+                  class="list-group"
+                >Logout</li></button>
+            </ul>
           {{else}}
-          <ul class="nav-list">
-            <a class="nav-object fake-button" href="/login"><li>Login</li></a>
-          </ul>
+            <ul class="nav-list">
+              <a class="nav-object fake-button text-white" href="/login"><li
+                  class="list-group"
+                >Login</li></a>
+            </ul>
           {{/if}}
 
         </nav>
 
       </header>
 
-      <main class="main-body">
+      <main class="main-body container-fluid">
 
-        {{{ body }}}
+        {{{body}}}
 
       </main>
 
-    <footer>
-    <p>The Tech blog © 2022</p>
-    </footer>
-  </div>
+      <footer class="text-white bg-dark text-center">
+        <p>The Tech blog © 2022</p>
+      </footer>
+    </div>
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
 
 </html>
