@@ -1,7 +1,8 @@
 this is post handlebar
 
-<div class="row mb-4 project">
+<div class="row mb-4 post">
   <div class="col-md-5">
+    <input id="post_id" type='hidden'value="{{post.id}}" />
     {{!-- <h2>{{post.title}}</h2> --}}
     <h2><input type="text" id="updated_title" name="updated_title" value="{{post.title}}"></h2>
     {{!-- <p>{{post.content}}</p> --}}
@@ -12,8 +13,8 @@ this is post handlebar
     <p>Created on {{format_date post.date_created}}</p>
   </div>
    <div class="form-group">
-    <button type="submit" class="btn btn-primary" id="update-post">Update Post</button>
-    <button type="submit" class="btn btn-primary" id="cxl">Cancel</button>
+    <button class="btn btn-primary" id="update-post">Update Post</button>
+    <button type="button" class="btn btn-primary" id="deletePost">Delete</button>
    </div>
  </div>
 
@@ -22,7 +23,7 @@ this is post handlebar
  
  <div> 
  {{#each post.comments }}
-<div class="row mb-4 project">
+<div class="row mb-4 comment">
   <div class="col-md-5">
     <p>{{content}}</p>
           <!-- Call helper function to format the date -->
@@ -45,4 +46,7 @@ this is post handlebar
     </form>
 
 
-      <script src="/js/comment.js"></script>
+    <script src="/js/post.js"></script>
+    <script src="/js/comment.js"></script>
+      
+     
