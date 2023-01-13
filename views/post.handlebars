@@ -1,4 +1,4 @@
-<div class="row post mb-4  card pl-4">
+<div class="row post mb-4 card pl-4">
   <div class="d-flex flex-row justify-content-between">
     <input class="w-50 p-3" id="post_id" type="hidden" value="{{post.id}}" />
     {{!-- <h2>{{post.title}}</h2> --}}
@@ -8,11 +8,13 @@
         name="updated_title"
         value="{{post.title}}"
       /></h2>
-       <!-- Call helper function to format the date -->
-    <p class="font-italic font-weight-ligh">Created on {{format_date post.date_created}}</p> 
+    <!-- Call helper function to format the date -->
+    <p class="font-italic font-weight-ligh">Created on
+      {{format_date post.date_created}}</p>
   </div>
   <div class="d-flex flex-column justify-content-between">
-    <p><input class="w-50 p-3"
+    <p><input
+        class="w-50 p-3"
         type="text"
         id="updated_content"
         name="updated_content"
@@ -24,12 +26,16 @@
   </div>
   <div class="form-group">
     <button class="btn btn-success" id="update-post">Update Post</button>
-    <button type="button" class="btn btn-secondary" id="deletePost">Delete</button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      id="deletePost"
+    >Delete</button>
   </div>
 </div>
 
 {{#if post.comments}}
-  <h2 class="font-italic ">Commments:</h2>
+  <h2 class="font-italic">Commments:</h2>
 
   <div>
     {{#each post.comments}}
@@ -37,7 +43,10 @@
         <div class="d-flex flex-row justify-content-between">
           <p class="w-50 p-3">{{content}}</p>
           <!-- Call helper function to format the date -->
-          <p class="font-italic font-weight-ligh">Created by {{user.name}} on {{format_date date_created}}</p>
+          <p class="font-italic font-weight-ligh">Created by
+            {{user.name}}
+            on
+            {{format_date date_created}}</p>
         </div>
 
       </div>
@@ -54,7 +63,7 @@
       name="post-comment"
     ></textarea>
   </div>
-  <div class="form-group ">
+  <div class="form-group">
     <button type="submit" class="btn btn-success">Create Comment</button>
   </div>
 </form>
